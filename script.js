@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const order = ['home', 'impact', 'experience', 'expertise', 'resume'];
-  const labels = {home:'Overview', impact:'Impact', experience:'Experience', expertise:'Expertise', resume:'Résumé & Contact'};
+  const labels = {home:'Overview', impact:'Impact', experience:'Experience', expertise:'Expertise', resume:'Resume & Contact'};
   const tabs = [...document.querySelectorAll('[data-tab]')];
   const panels = [...document.querySelectorAll('[data-panel]')];
   const nav = document.querySelector('[data-navigation]');
@@ -54,7 +54,7 @@
     if (focusPanel) document.querySelector(`#${name}`).focus({preventScroll:true});
   }
   nav.setAttribute('role','tablist');
-  nav.setAttribute('aria-label','Résumé sections');
+  nav.setAttribute('aria-label','Resume sections');
   tabs.forEach(tab => {
     const name = tab.dataset.tab;
     tab.id = `tab-${name}`;
